@@ -1,10 +1,10 @@
 {
-  "name": "react-simple-jstree",
+  "name": "react-simple-jstree2",
   "description": "The simple React.js wrapper for jstree",
   "version": "0.2.2",
   "main": "lib/index.js",
-  "author": "alwinn1977",
-  "repository": "alwinn1977/react-simple-jstree",
+  "author": "GonZOO",
+  "repository": "GonZOO82/react-simple-jstree",
   "license": "MIT",
   "scripts": {
     "compile": "babel src --out-dir lib",
@@ -20,7 +20,6 @@
     "prop-types": "^15.5.10"
   },
   "dependencies": {
-    "jstree": "^3.3.3"
-
+    "jstree": "^3.3.9"
   }
 }

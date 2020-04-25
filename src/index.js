@@ -26,6 +26,18 @@ class TreeView extends Component {
       $(this.treeContainer).on('changed.jstree', (e, data) => {
         this.props.onChange(e, data);
       });
+      $(this.treeContainer).on('rename_node.jstree', (e, data) => {
+        this.props.onChange(e, data);
+      });
+      $(this.treeContainer).on('delete_node.jstree', (e, data) => {
+        this.props.onChange(e, data);
+      });
+      $(this.treeContainer).on('move_node.jstree', (e, data) => {
+        this.props.onChange(e, data);
+      });
+      $(this.treeContainer).on('loaded.jstree', (e, data) => {
+        this.props.onChange(e, data);
+      });
     }
   }
 
