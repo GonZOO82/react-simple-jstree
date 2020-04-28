@@ -1,7 +1,7 @@
 {
   "name": "react-simple-jstree2",
   "description": "The simple React.js wrapper for jstree",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "main": "lib/index.js",
   "author": "GonZOO",
   "repository": "GonZOO82/react-simple-jstree",
