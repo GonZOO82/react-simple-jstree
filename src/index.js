@@ -9,10 +9,18 @@ class TreeView extends Component {
   static propTypes = {
     treeData: PropTypes.object.isRequired,
     onChange: PropTypes.func,
+    onRename: PropTypes.func,
+    onDelete: PropTypes.func,
+    onMove: PropTypes.func,
+    onLoad: PropTypes.func,
   };
 
   static defaultProps = {
     onChange: () => false,
+    onRename: () => false,
+    onDelete: () => false,
+    onMove: () => false,
+    onLoad: () => false,
   };
 
   shouldComponentUpdate(nextProps) {
@@ -27,18 +35,22 @@ class TreeView extends Component {
         this.props.onChange(e, data);
       });
       $(this.treeContainer).on('rename_node.jstree', (e, data) => {
-        this.props.onChange(e, data);
+        this.props.onRename(e, data);
       });
       $(this.treeContainer).on('delete_node.jstree', (e, data) => {
-        this.props.onChange(e, data);
+        this.props.onDelete(e, data);
       });
       $(this.treeContainer).on('move_node.jstree', (e, data) => {
-        this.props.onChange(e, data);
+        this.props.onMove(e, data);
       });
       $(this.treeContainer).on('loaded.jstree', (e, data) => {
-        this.props.onChange(e, data);
+        this.props.onLoad(e, data);
       });
     }
+  }
+
+  refresh() {
+    $(this.treeContainer).jstree('refresh');
   }
 
   componentDidUpdate() {

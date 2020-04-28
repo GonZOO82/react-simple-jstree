@@ -1,11 +1,9 @@
 # react-simple-jstree
 
-![Downloads](https://img.shields.io/npm/dm/react-simple-jstree.svg)
-![Downloads](https://img.shields.io/npm/dt/react-simple-jstree.svg)
-![npm version](https://img.shields.io/npm/v/react-simple-jstree.svg)
-![dependencies](https://img.shields.io/david/alwinn1977/react-simple-jstree.svg)
-![dev dependencies](https://img.shields.io/david/dev/alwinn1977/react-simple-jstree.svg)
-![License](https://img.shields.io/npm/l/react-simple-jstree.svg)
+![Downloads](https://img.shields.io/npm/dm/react-simple-jstree2.svg)
+![Downloads](https://img.shields.io/npm/dt/react-simple-jstree2.svg)
+![npm version](https://img.shields.io/npm/v/react-simple-jstree2.svg)
+![License](https://img.shields.io/npm/l/react-simple-jstree2.svg)
 
 The simple React.js wrapper for [jsTree](https://github.com/vakata/jstree).
 This component allows you to draw trees from JSON data easily and quickly.
@@ -17,20 +15,20 @@ about appropriate JSON data structure.
 Install it via npm:
 
 ```shell
-npm install react-simple-jstree
+npm install react-simple-jstree2
 ```
 
 And include in your project:
 
 ```javascript
-import TreeView from 'react-simple-jstree';
+import TreeView from 'react-simple-jstree2';
 ```
 
 ## Components's Props
 
 ### treeData
 
-It is a required prop. It containes a JSON data for tree. See [jsTree](https://github.com/vakata/jstree) to get more information 
+It is a required prop. It containes a JSON data for tree. See [jsTree](https://github.com/vakata/jstree) to get more information
 about appropriate JSON data structure.
 
 ### onChange
@@ -38,12 +36,18 @@ about appropriate JSON data structure.
 It is an optional event handler for the changed event, which occurs when one or more nodes
  have been selected. See example below for this prop's usage details.
 
+### Events
+- changed.jstree
+- rename_node.jstree
+- delete_node.jstree
+- move_node.jstree
+- loaded.jstree
 
 ## React.js (ES6) usage example:
 
 ```javascript
 import React, {Component} from 'react';
-import TreeView from 'react-simple-jstree';
+import TreeView from 'react-simple-jstree2';
 
 export class Tree extends Component {
 
@@ -109,7 +113,7 @@ IMPORTANT! If you use webpack, you have to install and configure css loaders and
 
 ```
 loaders: [
-     
+
       {
         test: /\.css$/,
         loaders: [
